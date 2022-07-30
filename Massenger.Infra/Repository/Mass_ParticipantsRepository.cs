@@ -48,7 +48,7 @@ namespace Massenger.Infra.Repository
         public bool UpdateParticipants(Mass_participants Participants)
         {
             var parameter = new DynamicParameters();
-            parameter.Add("@participants_id", Participants.participantsid, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            parameter.Add("@participants_id", Participants.id, dbType: DbType.Int32, direction: ParameterDirection.Input);
             parameter.Add("@phone_", Participants.conversation_id, dbType: DbType.Int32, direction: ParameterDirection.Input);
             parameter.Add("@Email_", Participants.user_id, dbType: DbType.Int32, direction: ParameterDirection.Input);
             parameter.Add("@type_", Participants.type, dbType: DbType.String, direction: ParameterDirection.Input);

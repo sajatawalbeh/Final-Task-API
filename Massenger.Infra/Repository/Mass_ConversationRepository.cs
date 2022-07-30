@@ -46,7 +46,7 @@ namespace Massenger.Infra.Repository
         public bool UpdateConversation(Mass_conversation Conversation)
         {
             var parameter = new DynamicParameters();
-            parameter.Add("@title_", Conversation.conversationid, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            parameter.Add("@title_", Conversation.id, dbType: DbType.Int32, direction: ParameterDirection.Input);
             parameter.Add("@conversation_id", Conversation.title, dbType: DbType.String, direction: ParameterDirection.Input);
 
             var result = dbContext.Connection.ExecuteAsync("conversation_package_api.updateconversation", parameter, commandType: CommandType.StoredProcedure);

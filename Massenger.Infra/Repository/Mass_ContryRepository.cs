@@ -48,7 +48,7 @@ namespace Massenger.Infra.Repository
         public bool UpdateCountry(Mass_contry Country)
         {
             var parameter = new DynamicParameters();
-            parameter.Add("@country_id", Country.countryid, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            parameter.Add("@country_id", Country.id, dbType: DbType.Int32, direction: ParameterDirection.Input);
             parameter.Add("@name_", Country.name, dbType: DbType.String, direction: ParameterDirection.Input);
 
             var result = dbContext.Connection.ExecuteAsync("country_package_api.updateusercountry", parameter, commandType: CommandType.StoredProcedure);

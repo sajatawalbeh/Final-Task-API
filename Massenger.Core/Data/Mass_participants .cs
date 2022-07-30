@@ -9,7 +9,7 @@ namespace Massenger.Core.Data
     public class Mass_participants
     {
         [Key]
-        public int participantsid { get; set; }
+        public int id { get; set; }
 
         public int user_id { get; set; }
         [ForeignKey("user_id")]

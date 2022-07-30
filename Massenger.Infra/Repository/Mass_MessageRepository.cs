@@ -54,7 +54,7 @@ namespace Massenger.Infra.Repository
         public bool Updatemessage(Mass_messages message)
         {
             var parameter = new DynamicParameters();
-            parameter.Add("@messages_id", message.messagesid, dbType: DbType.String, direction: ParameterDirection.Input);
+            parameter.Add("@messages_id", message.id, dbType: DbType.String, direction: ParameterDirection.Input);
             parameter.Add("@message_", message.message, dbType: DbType.String, direction: ParameterDirection.Input);
             parameter.Add("@createdAt", message.created_at, dbType: DbType.String, direction: ParameterDirection.Input);
             parameter.Add("@conversationID", message.conversation_id, dbType: DbType.String, direction: ParameterDirection.Input);

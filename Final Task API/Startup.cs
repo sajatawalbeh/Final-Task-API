@@ -51,6 +51,10 @@ namespace Final_Task_API
             services.AddScoped<IEmailservice, emailclass>();
             services.AddScoped<IMass_ServiceRepository, Mass_ServiceRepository>();
             services.AddScoped<IMass_ServiceService, Mass_ServiceService>(); 
+            services.AddScoped<IMass_CategoryRepository, Mass_CategoryRepository>();
+            services.AddScoped<IMass_CategoryService, Mass_CategoryService>(); 
+
+
 
                      services.AddScoped<IMass_ContactRepository, Mass_ContactRepository>();
             services.AddScoped<IMass_ContactService, Mass_ContactService>();

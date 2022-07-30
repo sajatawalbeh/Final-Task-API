@@ -46,7 +46,7 @@ namespace Massenger.Infra.Repository
         public bool UpdateCategory(Mass_category Category)
         {
             var parameter = new DynamicParameters();
-            parameter.Add("@category_id", Category.categoryid, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            parameter.Add("@category_id", Category.id, dbType: DbType.Int32, direction: ParameterDirection.Input);
             parameter.Add("@category_Name", Category.categoryName, dbType: DbType.String, direction: ParameterDirection.Input);
 
             var result = dbContext.Connection.ExecuteAsync("category_package_api.updatecategory", parameter, commandType: CommandType.StoredProcedure);

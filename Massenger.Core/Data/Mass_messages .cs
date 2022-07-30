@@ -9,7 +9,7 @@ namespace Massenger.Core.Data
    public class Mass_messages
     {
         [Key]
-        public int messagesid { get; set; }
+        public int id { get; set; }
         public string message { get; set; }
         public DateTime created_at { get; set; }
         public int sender_id { get; set; }
