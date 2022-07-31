@@ -50,7 +50,7 @@ namespace Massenger.Infra.Repository
         public bool Updateusercontact(Mass_user_contact usercontact)
         {
             var parameter = new DynamicParameters();
-            parameter.Add("@userContact_id", usercontact.user_contactid, dbType: DbType.String, direction: ParameterDirection.Input);
+            parameter.Add("@userContact_id", usercontact.id, dbType: DbType.String, direction: ParameterDirection.Input);
             parameter.Add("@firstName", usercontact.firstName, dbType: DbType.String, direction: ParameterDirection.Input);
             parameter.Add("@lastName", usercontact.lastName, dbType: DbType.String, direction: ParameterDirection.Input);
             parameter.Add("@userID", usercontact.user_id, dbType: DbType.Int32, direction: ParameterDirection.Input);

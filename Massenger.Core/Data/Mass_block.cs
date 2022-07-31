@@ -9,7 +9,7 @@ namespace Massenger.Core.Data
    public  class Mass_block
     {
         [Key]
-        public int blockid { get; set; }
+        public int id { get; set; }
         public DateTime created_at { get; set; }
         public int user_id { get; set; }
         [ForeignKey("user_id")]

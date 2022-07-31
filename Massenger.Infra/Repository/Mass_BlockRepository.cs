@@ -52,7 +52,7 @@ namespace Massenger.Infra.Repository
         {
 
             var parameter = new DynamicParameters();
-            parameter.Add("@block_id", block.blockid, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            parameter.Add("@block_id", block.id, dbType: DbType.Int32, direction: ParameterDirection.Input);
             parameter.Add("@userid", block.user_id, dbType: DbType.Int32, direction: ParameterDirection.Input);
             parameter.Add("@participantsid", block.participants_id, dbType: DbType.Int32, direction: ParameterDirection.Input);
             parameter.Add("@createdAt", block.created_at, dbType: DbType.DateTime, direction: ParameterDirection.Input);

@@ -9,7 +9,7 @@ namespace Massenger.Core.Data
     public class Mass_user_contact
     {
         [Key]
-        public int user_contactid { get; set; }
+        public int id { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
         public int user_id { get; set; }

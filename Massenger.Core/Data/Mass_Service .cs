@@ -9,7 +9,7 @@ namespace Massenger.Core.Data
     public class Mass_Service
     {
         [Key]
-        public int serviceid { get; set; }
+        public int id { get; set; }
         public string serviceName { get; set; }
         public decimal price { get; set; }
         public int categoryid { get; set; }

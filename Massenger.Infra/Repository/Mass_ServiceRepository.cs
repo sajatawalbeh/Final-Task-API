@@ -50,7 +50,7 @@ namespace Massenger.Infra.Repository
         public bool UpdateService(Mass_Service Service)
         {
             var parameter = new DynamicParameters();
-            parameter.Add("@service_id", Service.serviceid, dbType: DbType.String, direction: ParameterDirection.Input);
+            parameter.Add("@service_id", Service.id, dbType: DbType.String, direction: ParameterDirection.Input);
             parameter.Add("@service_Name", Service.serviceName, dbType: DbType.String, direction: ParameterDirection.Input);
             parameter.Add("@category_id", Service.categoryid, dbType: DbType.Int32, direction: ParameterDirection.Input);
 
