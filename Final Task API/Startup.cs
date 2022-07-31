@@ -52,12 +52,18 @@ namespace Final_Task_API
             services.AddScoped<IMass_ServiceRepository, Mass_ServiceRepository>();
             services.AddScoped<IMass_ServiceService, Mass_ServiceService>(); 
             services.AddScoped<IMass_CategoryRepository, Mass_CategoryRepository>();
-            services.AddScoped<IMass_CategoryService, Mass_CategoryService>(); 
-
-
-
-                     services.AddScoped<IMass_ContactRepository, Mass_ContactRepository>();
+            services.AddScoped<IMass_CategoryService, Mass_CategoryService>();
+            services.AddScoped<IMass_ContactRepository, Mass_ContactRepository>();
             services.AddScoped<IMass_ContactService, Mass_ContactService>();
+            
+            services.AddScoped<IMass_ParticipantsService, Mass_ParticipantsService>();
+            services.AddScoped<IMass_ParticipantsRepository, Mass_ParticipantsRepository>();
+
+            
+            services.AddScoped<IMass_ContactRepository, Mass_ContactRepository>();
+            services.AddScoped<IMass_ContactService, Mass_ContactService>();
+            services.AddScoped<IMass_ConversationRepository, Mass_ConversationRepository>();
+            services.AddScoped<IMass_ConversationService, Mass_ConversationService>();
 
             services.AddAuthentication(x =>
             {
